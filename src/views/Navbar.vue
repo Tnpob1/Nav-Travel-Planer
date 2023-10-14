@@ -185,7 +185,7 @@ export default {
   height: 100vh;
   display: block;
   background-color: rgba(235, 235, 235, 0.8);
-  padding-top: 120px;
+  padding-top: 60px;
   transition: 0.4s;
 }
 
@@ -209,6 +209,7 @@ export default {
 @media (min-width: 1400px) {
   .mobile-nav {
     display: none;
+    padding-top: 50px;
   }
   .hamburger {
     display: none;
