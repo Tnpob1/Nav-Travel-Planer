@@ -5,11 +5,12 @@
         ><div class="logo"><p>Travel Planner</p></div></RouterLink
       >
       <div class="mobile-nav">
+        <RouterLink to="/"><a class="Log-btn">Login</a></RouterLink>
         <RouterLink to="/"><a>Home</a></RouterLink>
         <RouterLink to="/"><a>About</a></RouterLink>
         <RouterLink to="/"><a>Reviews</a></RouterLink>
         <RouterLink to="/"><a>Contact</a></RouterLink>
-        <RouterLink class="b-start links" to="/plan"><a>Start</a></RouterLink>
+        <RouterLink class="b-start" to="/plan"><a>Start</a></RouterLink>
       </div>
       <button class="hamburger">
         <div class="bar"></div>
@@ -20,7 +21,10 @@
         <RouterLink to="/">Reviews</RouterLink>
         <RouterLink to="/">Contact</RouterLink>
       </div>
-      <RouterLink class="b-start links" to="/plan">Start</RouterLink>
+      <div class="s-l-btn">
+        <RouterLink class="nav-btn" to="/plan">Start</RouterLink>
+        <RouterLink class="nav-btn" to="/">Login</RouterLink>
+      </div>
     </div>
   </div>
 </template>
@@ -90,8 +94,49 @@ export default {
   padding: 6px;
   width: 100px;
   text-align: center;
+  margin-right: 10px;
 }
 
+.Log-btn {
+  background: linear-gradient(to right, #cc2e5d, #ff5858);
+  color: white;
+}
+
+.nav-btn {
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-right: -50px;
+  width: 100px;
+
+  display: inline-block;
+  padding: 5px 0px;
+  background-image: linear-gradient(to right, #cc2e5d, #ff5858);
+  border-radius: 8px;
+
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.4);
+  transition: 0.4s ease-out;
+
+  &:hover {
+    box-shadow: 6px 6px rgba(0, 0, 0, 0.6);
+  }
+}
+
+.s-l-btn {
+  padding-left: -100px;
+  display: flex;
+  margin-right: 90px;
+  margin-left: -90px;
+}
+
+/* hamburger */
 .hamburger {
   position: relative;
   display: block;
@@ -111,7 +156,7 @@ export default {
   display: block;
   width: 100%;
   height: 5px;
-  background: linear-gradient(to right, #CC2E5D, #FF5858);
+  background: linear-gradient(to right, #cc2e5d, #ff5858);
   margin: 6px 0px;
   transition: 0.4s;
   border-radius: 10px;
@@ -161,8 +206,7 @@ export default {
   border-radius: 10px;
 }
 
-
-@media (min-width: 1050px) {
+@media (min-width: 1400px) {
   .mobile-nav {
     display: none;
   }
@@ -170,8 +214,17 @@ export default {
     display: none;
   }
 }
-@media (max-width: 1050px) {
+@media (max-width: 1400px) {
   .links {
+    display: none;
+  }
+  .nav-btn {
+    display: none;
+  }
+  .b-start {
+    display: none;
+  }
+  .s-l-btn {
     display: none;
   }
 }

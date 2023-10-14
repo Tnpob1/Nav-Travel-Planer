@@ -13,7 +13,7 @@ app.use(router)
 
 app.mount('#app')
 
-
+// hamburger
 const menu_btn = document.querySelector('.hamburger')
 const mobile_menu = document.querySelector('.mobile-nav')
 
